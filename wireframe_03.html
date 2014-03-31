@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en'>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content"width=device-width, initial-scale=1.0">
+		<title>Wireframe mobile first site layout</title>
+       		<script src="jquery-1.11.0.js"></script>
+		<script>
+
+
+		$(document).ready(function(){
+			var startY = 450;
+			$(window).scroll(function(){
+    				checkY();
+			});
+
+			function checkY(){
+			    if( $(window).scrollTop() > 50 ){
+			        $("#sliding_menu").slideUp();
+			    }
+
+			}
+
+
+
+
+            $("#menu").click(function() {
+              $("#sliding_menu").slideToggle("swing");
+            });
+
+
+	});//end doc ready
+        </script>
+
+
+
+		<style>
+			body{
+				background-color: white;
+				font-family: sans-serif;
+			}
+			.wireframe{
+				margin: 0;
+				padding: 0;
+			}
+			.wireframe section{
+				margin: 1.5em;
+				background-color: whitesmoke;
+				border: 1px solid gainsboro;
+				font: small sans-serif;
+				text-align: center;
+				color: silver;
+			}
+			.wireframe #logo{
+				position: fixed;
+				top: 0;
+				margin: 0;
+				width: 100%;
+				height: 4em;
+			}
+.hamburger{
+	display: block;
+	border: 1px solid grey;
+	background-color: grey;
+	border-radius: 0.2em;
+	width: 2em;
+	height: 0.3em;
+	color:black;
+	box-shadow: 
+	    0 0.7em 0 0 grey,
+	    0 1.4em 0 0 grey;
+}
+			.wireframe #sliding_menu{
+               			display: none;
+				position: fixed;
+				top: 4em;
+				margin: 0;
+				width: 100%;
+				height: 20em;
+				background-color: gainsboro;
+			}
+			.wireframe #menu{
+				position: fixed;
+				top: 0;
+				right: 0;
+				height: 2em;
+				font-size: 1.5em;
+				padding: 0.em;
+				margin: 0.4em;
+			}
+			.wireframe #page{
+				padding-top: 3.25em;
+			}
+			.wireframe h1{
+				font-weight:100;
+			}
+			.wireframe #what{
+				height: 30em;
+			}
+			.wireframe #how{
+				height: 40em;
+			}
+			.wireframe #post-its{
+				height: 50em;
+			}
+			.wireframe #footer{
+				height: 20em;
+				margin: 0;
+				width: 100%;
+				background-color: gainsboro;
+			}
+
+	@media only screen and (min-width:600px){
+
+	}
+
+
+	@media only screen and (min-width:900px){
+
+	}
+
+	</style>
+	</head>
+	<body class="wireframe">
+
+		<div id="page">
+			<section id="logo">
+				<h1>Logo</h1>
+				<div id="menu"><span class="hamburger"></span></div>
+			</section>
+			<section id="sliding_menu">
+				<h1>Sliding menu</h1>
+			</section>
+			<section id="what">
+				<h1>1. What is is</h1>
+			</section>
+			<section id="how">
+				<h1>2. How to proceed</h1>
+			</section>
+			<section id="post-its">
+				<h1>3. Post-its to content</h1>
+			</section>
+			<section id="footer">
+				<h1>Footer - social media icons</h1>
+			</section>
+		</div>
+
+	</body>
+</html>
